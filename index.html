@@ -252,103 +252,133 @@
 </head>
 
 <body>
+</style>
+</head>
+
+<body>
     <!-- Floating Heart -->
     <div class="heart"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">cupc4keu</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#generate">Generate Email</a></li>
-                    <li class="nav-item">
-                        <label for="bgUploader" class="btn">🎀Change Background</label>
-                        <input type="file" id="bgUploader" class="file-input" accept="image/*" style="display: none;">
-                    </li>
-                </ul>
-            </div>
+     <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pyeulmails</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#generate">Generate Email</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://mega.nz/file/22Ij1CCT#F6lxbT02K82rywv9IWRmD2h0x4UL1vivxUsP_DP1D7Q" target="_blank">📱 Mobile App</a></li>
+                <li class="nav-item">
+                    <label for="bgUploader" class="btn">🎀Change Background</label>
+                    <input type="file" id="bgUploader" class="file-input" accept="image/*" style="display: none;">
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>cupc4keu</h1>
+        <h1>Pyeulmails</h1>
         <p>Effortlessly generate temporary emails for enhanced privacy!</p>
         <a href="#generate" class="btn btn-primary">Get Started</a>
     </header>
 
-    <!-- Temporary Email Form -->
-    <section id="generate" class="container mt-5">
-        <div class="card p-4 rounded-4 shadow-lg" style="background: rgba(255, 102, 178, 0.1); border: 2px solid #000000;">
-            <h4 class="text-center mb-4" style="color: #000000; font-weight: bold;">✨ Generate Temporary Email ✨</h4>
+   
+<!-- Temporary Email Form -->
+<section id="generate" class="container mt-5">
+    <div class="card p-4 rounded-4 shadow-lg" style="background: rgba(255, 102, 178, 0.1); border: 2px solid #ff66b2;">
+        <h4 class="text-center mb-4" style="color: #ff3399; font-weight: bold;">🌸Generate Temporary Email🌸</h4>
 
-            <!-- Generated Email Section -->
-            <div class="mb-3 position-relative">
-                <label for="generatedEmail" class="form-label" style="color: #000000; font-weight: bold;">Your Temporary Email</label>
-                <div class="input-group">
-                    <input type="text" id="generatedEmail" class="form-control rounded-pill" readonly placeholder="Click 'Generate'" 
-                        style="border: 2px solid #000000; background: #ffe6f1; color: #000000; font-weight: bold;">
-                    <button id="copyEmailBtn" class="btn rounded-pill" 
-                        style="background: #f959ff; color: rgb(234, 2, 130); border: none;">📋 Copy</button>
+        <!-- Generated Email Section -->
+        <div class="mb-3 position-relative">
+            <label for="generatedEmail" class="form-label" style="color: #ff3399; font-weight: bold;"> Your Temporary Email</label>
+            <div class="input-group">
+                <input type="text" id="generatedEmail" class="form-control rounded-pill" readonly placeholder="Click 'Generate'" 
+                    style="border: 2px solid #ff66b2; background: #ffe6f1; color: #ff3399; font-weight: bold;">
+                <button id="copyEmailBtn" class="btn rounded-pill" 
+                    style="background: #ff3399; color: white; border: none;">🍥Copy</button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-4">
+            <button id="generateEmailBtn" class="btn px-4 py-2 rounded-pill" 
+                style="background: linear-gradient(45deg, #ff66b2, #ff3399); color: white; font-size: 1.2rem; transition: 0.3s;">
+                🪷  Generate Email
+            </button>
+        </div>
+
+        <hr style="border-top: 2px dashed #ff3399;">
+
+        <!-- Inbox Section -->
+        <h4 class="text-center mb-3" style="color: #ff3399; font-weight: bold;">💌Check Your Inbox</h4>
+        <div class="mb-3">
+            <label for="emailInput" class="form-label" style="color: #ff3399; font-weight: bold;">Your Temporary Email</label>
+            <div class="input-group">
+                <input type="text" id="emailInput" class="form-control rounded-pill" readonly placeholder="Your generated email" 
+                    style="border: 2px solid #ff66b2; background: #ffe6f1; color: #ff3399; font-weight: bold;">
+                <button id="checkBtn" class="btn rounded-pill" 
+                    style="background: #ff66b2; color: white; border: none;">💮 Check Emails</button>
+            </div>
+        </div>
+
+        <!-- Inbox Display -->
+        <div class="inbox-container mt-4 p-3 rounded-4" style="
+            max-height: 300px; overflow-y: auto; 
+            border: 2px solid #ff3399; background: rgba(255, 102, 178, 0.1);">
+            <h5 class="text-center" style="color: #ff3399;">📬 Inbox</h5>
+            <div id="emailContent" class="p-2 text-dark" style="font-weight: bold; color: #ff3399;">No emails yet...</div>
+        </div>
+    </div>
+</section>
+    <!-- Features Section -->
+    <section id="features" class="features container">
+        <h2 class="text-center">Why Use Pyeulmails?</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>Privacy</h4>
+                    <p>Keep your real email address private and secure with temporary emails.</p>
                 </div>
             </div>
-
-            <div class="d-flex justify-content-center mb-4">
-                <button id="generateEmailBtn" class="btn px-4 py-2 rounded-pill" 
-                    style="background: linear-gradient(45deg, #cf01ba, #ff1ffb); color: white; font-size: 1.2rem; transition: 0.3s;">
-                    🚀 Generate Email
-                </button>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>Ease of Use</h4>
+                    <p>Quickly generate a temporary email with just one click!</p>
+                </div>
             </div>
-
-            <hr style="border-top: 2px dashed #000000;"> 
-
-            <!-- Inbox Section -->
-            <h4 class="text-center mb-3" style="color: #000000; font-weight: bold;">📩 Check Your Inbox</h4>
-            <div class="mb-3">
-                <button id="checkMessagesBtn" class="btn btn-primary" 
-                    style="font-size: 1.2rem; border-radius: 25px; transition: all 0.3s ease;">
-                    Fetch OTP
-                </button>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h4>Free</h4>
+                    <p>Our service is completely free, with no hidden costs!</p>
+                </div>
             </div>
         </div>
     </section>
+
+
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 By Pyeulmails. All Rights Reserved By Pyeul Productions <a href="#">Made By The Husband of Pyeul Lihm</a></p>
+        <p>&copy; 2025 Pyeulmails. All Rights Reserved Made By The Husband of Pyeul Lihm. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
-
-    <script src="design.js"></script>
-
-<script>
-const bgUploader = document.getElementById("bgUploader");
-
-bgUploader.addEventListener("change", (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-
-        reader.onload = (e) => {
-            document.body.style.backgroundImage = `url('${e.target.result}')`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundAttachment = "fixed";
-        };
-
-        reader.onerror = () => {
-            alert("Failed to load the image. Please try again with a valid image.");
-        };
-
-        reader.readAsDataURL(file);
-    } else {
-        alert("No file selected. Please select an image.");
-    }
-});
-</script>
-
 </body>
+
+
+    <script>
+        const bgUploader = document.getElementById('bgUploader');
+        bgUploader.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = () => {
+                document.body.style.backgroundImage = `url(${reader.result})`;
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+
 </html>
